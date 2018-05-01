@@ -3,16 +3,13 @@ var router = express.Router();
 var bodyParser = require('body-parser')
 
 //simple get the view
-
-router.get('/index',function(req,res){
+router.get('/',function(req,res){
   res.render('index')
 })
 //get profiile of specific user
 router.get('/profile/:name/:id',function(req,res){
   //if(req.params.name == 'fahad' && req.params.id == '1'){
       res.send("you want to get profile of "+req.params.name+" who's employee id is "+req.params.id);//http://localhost:4500/profile/fahad/1
-
-
   //}
   //else{
   //  res.send('not get your profile')
@@ -45,16 +42,5 @@ router.post('/myContact',function(req,res){
 res.render('contact-success',{data:req.body});
 
 });
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = router

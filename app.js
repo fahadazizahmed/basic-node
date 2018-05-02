@@ -1,4 +1,3 @@
-const port
 var express = require('express');
 var app = express();
 var myController = require('./Controller/myRouter');
@@ -10,4 +9,4 @@ app.use(myController);
 
 
 app.listen(200);
-console.log('app is listen on port 4500')
+console.log('app is listen on port 200');
